@@ -1,0 +1,45 @@
+body {
+  padding: 50px;
+  font: 14px "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+a {
+  color: #00B7FF;
+  text-decoration: none;
+}
+
+input {
+	display: block;
+	width: 250px;
+	margin-bottom: 4px;
+}
+
+button {
+	width: 254px;
+	margin-top: 12px;
+	margin-bottom: 4px;
+	padding: 8px 16px 8px 16px;
+	color: #fff;
+	background: #003265;
+	border-radius: 4px;
+	cursor: pointer;
+	text-align: center;
+	font-size: 14px;
+	border: 1px solid transparent;
+	display: block;
+	margin-left: -1px;
+}
+
+button:hover {
+	color: #000;
+	background: transparent;
+	border: 1px solid black;
+}
+
+#paypal, #creditcard {
+	float: left;
+}
+
+#creditcard {
+	margin-left: 40px;
+}

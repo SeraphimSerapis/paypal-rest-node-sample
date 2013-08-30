@@ -1,0 +1,29 @@
+{
+  "author": "Tim Messerschmidt",
+  "name": "paypal-rest-node-sample",
+  "version": "1.0.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SeraphimSerapis/paypal-rest-node-sample.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SeraphimSerapis/paypal-rest-node-sample/issues",
+    "email": "tmesserschmidt@paypal.com"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.3.5",
+    "jade": "*",
+    "paypal-rest-sdk": "~0.6.4"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.6.4"
+  },
+  "engines": {
+    "node": ">=0.10"
+  }
+}

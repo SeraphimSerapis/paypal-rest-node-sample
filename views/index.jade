@@ -1,0 +1,40 @@
+extends layout
+
+block content
+  h1 PayPal REST API
+
+  div#paypal
+    p Create a new PayPal Payment
+    form(action="/create")
+      input(type='hidden', name='method', value='paypal')
+      label(for='amount') Amount
+      input(type='text', id='amount', name='amount')
+      label(for='currency') Currency
+      input(type='text', id='currency', maxlength='3', placeholder='USD', name='currency')
+      label(for='description') Description
+      input(type='text', id='description', name='description')
+      button(type='submit') Create Payment
+
+  div#creditcard
+    p Create a new Credit Card Payment
+    form(action="/create")
+        input(type='hidden', name='method', value='credit_card')
+        label(for='amount') Amount
+        input(type='text', id='amount', name='amount')
+        label(for='currency') Currency
+        input(type='text', id='currency', maxlength='3', placeholder='USD', name='currency')
+        label(for='first_name') First Name
+        input(type='text', id='first_name', name='first_name')
+        label(for='last_name') Last Name
+        input(type='text', id='last_name', name='last_name')
+        label(for='number') Number
+        input(type='text', id='number', name='number')
+        label(for='type') Type
+        input(type='text', id='type', name='type')
+        label(for='expire_month') Expire Month
+        input(type='text', id='expire_month', name='expire_month')
+        label(for='expire_year') Expire Year
+        input(type='text', id='expire_year', name='expire_year')
+        label(for='cvv2') CVV
+        input(type='text', id='cvv2', name='cvv2')
+        button(type='submit') Create Payment

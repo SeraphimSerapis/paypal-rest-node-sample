@@ -1,0 +1,20 @@
+extends layout
+
+block content
+	- if (method === 'paypal') { method = 'PayPal'; var isPayPal = true; }
+	- else if(method === 'credit_card') { method = 'Credit Card' };
+	- var header = "Created a new " + method + " payment";
+	- var payment_details = JSON.stringify(payment, null, 2);
+	- var action = "";
+	- for(var i=0; i < payment.links.length; i++) {
+	- 	var link = payment.links[i];
+	- 	if (link.method === 'REDIRECT') {
+	- 		action = link.href;
+	- 	}
+	- }
+	h1= header
+	if isPayPal
+		a(href=action)
+			button(type='submit') Redirect
+	pre
+		p= payment_details
