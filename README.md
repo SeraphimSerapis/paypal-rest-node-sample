@@ -2,6 +2,8 @@
 
 This is a sample application for the PayPal REST API Node.js SDK
 
+If you're looking for a real world sample - check out [rest-api-sample-app-nodejs](http://github.com/paypal/rest-api-sample-app-nodejs).
+
 ### Configuration
 
 Get your API credentials over at [developer.paypal.com](http://developer.paypal.com/webapps/developer/applications/myapps) by creating a new application. Use these credentials in the [config.json](../master/config.json) file.
