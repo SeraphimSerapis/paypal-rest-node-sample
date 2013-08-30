@@ -20,7 +20,7 @@ First of all install all needed packages using `npm install`. Then run the app b
 
 #### Development dependencies
 
-[grunt](http://npmjs.org/package/grunt) - Runs tasks like JSHint validation
+[grunt](http://npmjs.org/package/grunt) - Runs tasks like JSHint validation  
 [grunt-contrib-jshint](http://npmjs.org/package/grunt-contrib-jshint) - JSHint validation for JS files
 
 ### Contributing
