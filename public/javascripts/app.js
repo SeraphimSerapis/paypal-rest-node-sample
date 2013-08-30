@@ -11,6 +11,7 @@ $(function () {
 	});
 });
 
+// found at: http://webstandardssherpa.com/reviews/auto-detecting-credit-card-type/
 function getCreditCardType(accountNumber) {
 	//start without knowing the credit card type
 	var result = "unknown";
