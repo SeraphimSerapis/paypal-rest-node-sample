@@ -23,7 +23,7 @@ try {
 routes.init(config);
 
 // all environments
-app.set('port', config.port || process.env.PORT);
+app.set('port', process.env.PORT ||config.port);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 app.use(express.favicon());
