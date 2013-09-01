@@ -36,6 +36,13 @@ button:hover {
 	border: 1px solid black;
 }
 
+.ribbon {
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: 0;
+}
+
 #paypal, #creditcard {
 	float: left;
 }
