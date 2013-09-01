@@ -53,18 +53,18 @@ exports.create = function (req, res) {
 			console.log(error);
 			res.render('error', { 'error': error });
 		} else {
-			req.session.payment_id = payment.id;
-			res.render('create', { 'payment': payment, 'method': method });
+			req.session.paymentId = payment.id;
+			res.render('create', { 'payment': payment });
 		}
 	});
 };
 
 exports.execute = function (req, res) {
-	var payment_id = req.session.payment_id;
-	var payer_id = req.param('PayerID');
+	var paymentId = req.session.paymentId;
+	var payerId = req.param('PayerID');
 
-	var details = { "payer_id": payer_id };
-	var payment = paypal.payment.execute(payment_id, details, function (error, payment) {
+	var details = { "payer_id": payerId };
+	var payment = paypal.payment.execute(paymentId, details, function (error, payment) {
 		if (error) {
 			console.log(error);
 			res.render('error', { 'error': error });
