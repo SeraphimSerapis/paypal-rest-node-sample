@@ -10,7 +10,7 @@ exports.index = function (req, res) {
 };
 
 exports.create = function (req, res) {
-	var method = req.param('method');
+	var method = req.query.method;
 
 	var payment = {
 		"intent": "sale",
@@ -18,29 +18,29 @@ exports.create = function (req, res) {
 		},
 		"transactions": [{
 			"amount": {
-				"currency": req.param('currency'),
-				"total": req.param('amount')
+				"currency": req.query.currency,
+				"total": req.query.amount
 			},
-			"description": req.param('description')
+			"description": req.query.description
 		}]
 	};
 
 	if (method === 'paypal') {
 		payment.payer.payment_method = 'paypal';
 		payment.redirect_urls = {
-			"return_url": "http://pprestnode.herokuapp.com/execute",
-			"cancel_url": "http://pprestnode.herokuapp.com/cancel"
+			"return_url": "http://localhost:3000/execute",
+			"cancel_url": "http://localhost:3000/cancel"
 		};
 	} else if (method === 'credit_card') {
 		var funding_instruments = [
 			{
 				"credit_card": {
-					"type": req.param('type').toLowerCase(),
-					"number": req.param('number'),
-					"expire_month": req.param('expire_month'),
-					"expire_year": req.param('expire_year'),
-					"first_name": req.param('first_name'),
-					"last_name": req.param('last_name')
+					"type": req.query.type.toLowerCase(),
+					"number": req.query.number,
+					"expire_month": req.query.expire_month,
+					"expire_year": req.query.expire_year,
+					"first_name": req.query.first_name,
+					"last_name": req.query.last_name
 				}
 			}
 		];
@@ -61,7 +61,7 @@ exports.create = function (req, res) {
 
 exports.execute = function (req, res) {
 	var paymentId = req.session.paymentId;
-	var payerId = req.param('PayerID');
+	var payerId = req.query.PayerID;
 
 	var details = { "payer_id": payerId };
 	var payment = paypal.payment.execute(paymentId, details, function (error, payment) {
