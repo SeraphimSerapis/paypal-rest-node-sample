@@ -1,5 +1,7 @@
 ## PayPal REST API Sample for Node.js
 
+*Not actively maintained anymore.*
+
 This is a sample application for the PayPal REST API Node.js SDK
 
 If you're looking for a real world sample - check out [rest-api-sample-app-nodejs](http://github.com/paypal/rest-api-sample-app-nodejs).
@@ -12,7 +14,7 @@ The app uses standard PayPal test credentials at this very moment.
 
 ### Running it
 
-First of all install all needed packages using `npm install`. Then run the app by using `node app.js`.
+First, install all needed packages using `npm install`. Then run the app by using `node app.js`.
 
 ### Dependencies
 
@@ -24,12 +26,3 @@ First of all install all needed packages using `npm install`. Then run the app b
 
 [grunt](http://npmjs.org/package/grunt) - Runs tasks like JSHint validation  
 [grunt-contrib-jshint](http://npmjs.org/package/grunt-contrib-jshint) - JSHint validation for JS files
-
-### Contributing
-
-Happy to have a look at pull requests
-
-### Author
-
-**Tim Messerschmidt**
-[github.com/seraphimserapis](https://github.com/seraphimserapis)
